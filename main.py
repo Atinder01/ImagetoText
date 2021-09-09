@@ -41,7 +41,7 @@ if uploaded_file is not None:
             #   pdf.cell(200,10," ")
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
-    st.write(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{t}</p>', unsafe_allow_html=True)
+    st.write(f'<p style="background-color:#0066cc;">{t}</p>', unsafe_allow_html=True)
 
 st.text("")
 st.text("")
