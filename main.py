@@ -8,12 +8,11 @@ def credits(content):
     st.markdown(
         f'<p style="color:{"#0796B6"};">{content}</p>',
         unsafe_allow_html=True)
-
-new_title = '<p style="font-family:sans-serif; color:#0796B6; font-size: 42px; text-align: center">GET TEXT FROM IMAGE</p>'
-st.markdown(new_title, unsafe_allow_html=True)
-#st.title("GET TEXT FROM IMAGE")
+    
 image = Image.open("image2text.png")
 st.image(image, use_column_width=True)
+new_title = '<p style="font-family:sans-serif; color:#0796B6; font-size: 42px; text-align: center">GET TEXT FROM IMAGE</p>'
+st.markdown(new_title, unsafe_allow_html=True)
 
 pytesseract.pytesseract.tesseract_cmd = "tesseract"
 credits("""
