@@ -39,3 +39,16 @@ if uploaded_file is not None:
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     st.write("** Text in your image goes here: **")
     st.write(t)
+
+def credits(content):
+    st.markdown(
+        f'<p style="color:{"#f63333"};">{content}</p>',
+        unsafe_allow_html=True)
+
+
+st.text("")
+st.text("")
+credits("Made By:")
+credits("Atinderpal Kaur")
+credits("101803176")
+credits("COE-9")
