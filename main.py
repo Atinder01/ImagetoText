@@ -17,9 +17,6 @@ st.image(image, use_column_width=True)
 
 pytesseract.pytesseract.tesseract_cmd = "tesseract"
 credits("""
-** Convert Image To Text **
-""")
-credits("""
 If you want to find out how to turn an image into a text document, you came to the right place. This free online tool allows you to convert from image to text.
 Upload the image from which you need to extract text
 """)
