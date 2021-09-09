@@ -25,7 +25,7 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     credits("")
-    credits("** Getting text... **")
+    credits("Getting text...")
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
     t = pytesseract.image_to_string(img)
