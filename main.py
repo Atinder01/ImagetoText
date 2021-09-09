@@ -42,7 +42,7 @@ if uploaded_file is not None:
 
 def credits(content):
     st.markdown(
-        f'<p style="color:{"#f63333"};">{content}</p>',
+        f'<p style="color:{"#0796B6"};">{content}</p>',
         unsafe_allow_html=True)
 
 
