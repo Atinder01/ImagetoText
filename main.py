@@ -8,7 +8,7 @@ st.title("Get text from image")
 image = Image.open("image2text.png")
 st.image(image, use_column_width=True)
 
-pytesseract.pytesseract.tesseract_cmd = "Tesseract-OCR\\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = "tesseract.exe"
 st.write("""
 ** Convert Image To Text **
 """)
