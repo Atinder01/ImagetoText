@@ -41,7 +41,7 @@ if uploaded_file is not None:
             #except UnicodeEncodeError:
             #   pdf.cell(200,10," ")
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
-    credits("** Text in your image goes here: **")
+    credits("Text in your image goes here: ")
     st.write(t)
 
 st.text("")
