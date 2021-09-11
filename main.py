@@ -21,7 +21,7 @@ Upload the image from which you need to extract text
 """)
 file = st.file_uploader("")
 if file is not None:
-  try:
+    #try:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     img=cv2.medianBlur(img,5)
@@ -39,7 +39,7 @@ if file is not None:
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
     st.write(t)
-  except:
+    #except:
     error = '<p style="font-family:sans-serif; color:red; font-size: 22px; text-align: center">Please upload a valid file !</p>'
     st.markdown(error, unsafe_allow_html=True)
 
