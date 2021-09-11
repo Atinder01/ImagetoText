@@ -4,9 +4,6 @@ import cv2
 from PIL import Image
 import numpy as np
 
-def remove_noise(image):
-    return cv2.medianBlur(image,5)
-
 def credits(content):
     st.markdown(
         f'<p style="color:{"#0796B6"};">{content}</p>',
@@ -27,7 +24,8 @@ if file is not None:
   try:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
-    img=remove_noise(img)
+    img=cv2.medianBlur(img,5)
+    img=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
     t = pytesseract.image_to_string(img)
