@@ -66,7 +66,4 @@ if file is not None:
 
 st.text("")
 st.text("")
-credits("Made By:")
-credits("Atinderpal Kaur")
-st.text("")
-st.text("")
+st.text("Made By: Atinderpal Kaur")
