@@ -17,6 +17,10 @@ Libraries used:
 
 **Numpy:** It is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays.
 
+Flow of the code:
+
+![text2image-Flowchart](https://user-images.githubusercontent.com/67895402/132952826-35231b61-b445-4d40-a0ef-eed9ecafa0ab.png)
+
 For more details you can refer to the video:
 
 
