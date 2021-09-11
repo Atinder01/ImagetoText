@@ -44,7 +44,7 @@ if uploaded_file is not None:
     credits("Text in your image goes here: ")
     st.write(t)
   except:
-    credits("Please upload a file !")
+    credits("Please upload a valid file !")
 
 st.text("")
 st.text("")
