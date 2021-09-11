@@ -64,6 +64,9 @@ if file is not None:
     error = '<p style="font-family:sans-serif; color:red; font-size: 22px; ">Invalid file uploaded!</p><p style="font-family:sans-serif; color:red; font-size: 22px; ">Please upload a valid file.</p>'
     st.markdown(error, unsafe_allow_html=True)
 
+    
+st.text("")
+st.text("")    
 st.text("")
 st.text("")
-st.text("Made By: Atinderpal Kaur")
+st.text("Made by Atinderpal Kaur")
