@@ -38,7 +38,7 @@ if file is not None:
             cv2.putText(img,b[11],(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(50,50,50),1)
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
-    if t:
+    if t!="":
         st.write(t)
     else:
         st.write("No text found")
