@@ -37,7 +37,7 @@ if file is not None:
     #try:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
-    img=deskew(img)
+    #img=deskew(img)
     #ret,img = cv2.threshold(np.array(img), 125, 255, cv2.THRESH_BINARY)
     #img=cv2.medianBlur(img,5)
     #img=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -53,7 +53,7 @@ if file is not None:
             cv2.putText(img,b[11],(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(50,50,50),1)
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
-    if t!="":
+    if t!="0":
         st.write(t)
     else:
         st.write("No text found")
