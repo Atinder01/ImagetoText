@@ -44,8 +44,10 @@ if file is not None:
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
     t = pytesseract.image_to_string(img)
+    flag=0
     for x,b in enumerate(boxes.splitlines()):
       if x!=0:
+        flag=1
         b=b.split()
         if(len(b)==12):
             x,y,w,h=int(b[6]),int(b[7]),int(b[8]),int(b[9])
@@ -53,7 +55,7 @@ if file is not None:
             cv2.putText(img,b[11],(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(50,50,50),1)
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
-    if x!=y:
+    if flag:
         st.write(t)
     else:
         st.write("No text found")
