@@ -22,7 +22,7 @@ Upload the image from which you need to extract text
 """)
 uploaded_file = st.file_uploader("")
 if uploaded_file is not None:
-  if filetype.isimage(uploaded_file):
+  if filetype.is_image(uploaded_file):
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     hImg,wImg,_=img.shape
