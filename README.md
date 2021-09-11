@@ -18,5 +18,8 @@ Libraries used:
 **Numpy:** It is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays.
 
 For more details you can refer to the video:
-https://user-images.githubusercontent.com/67895402/132948984-df8916e4-55df-4e96-98b0-3181aaeda2c7.mp4
+
+
+https://user-images.githubusercontent.com/67895402/132949853-ebc01959-c899-49a7-982e-c351b7cdf745.mp4
+
 
