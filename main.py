@@ -21,6 +21,7 @@ Upload the image from which you need to extract text
 """)
 uploaded_file = st.file_uploader("")
 if uploaded_file is not None:
+  try:  
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     credits("")
@@ -42,6 +43,8 @@ if uploaded_file is not None:
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
     st.write(t)
+  except:
+    credits("Please upload a file !")
 
 st.text("")
 st.text("")
@@ -49,3 +52,5 @@ credits("Made By:")
 credits("Atinderpal Kaur")
 credits("101803176")
 credits("COE-9")
+st.text("")
+st.text("")
