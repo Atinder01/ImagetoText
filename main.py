@@ -47,9 +47,9 @@ if file is not None:
     flag=0
     for x,b in enumerate(boxes.splitlines()):
       if x!=0:
-        flag=1
         b=b.split()
         if(len(b)==12):
+            flag=1
             x,y,w,h=int(b[6]),int(b[7]),int(b[8]),int(b[9])
             cv2.rectangle(img,(x,y),(w+x,h+y),(50,50,50),1)
             cv2.putText(img,b[11],(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(50,50,50),1)
