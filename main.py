@@ -44,8 +44,7 @@ if uploaded_file is not None:
     st.write(t)
   else:
     error = '<p style="font-family:sans-serif; color:red; font-size: 22px; text-align: center">Please upload a valid file !</p>'
-    st.markdown(new_title, unsafe_allow_html=True)
-    credits(
+    st.markdown(error, unsafe_allow_html=True)
 
 st.text("")
 st.text("")
