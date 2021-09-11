@@ -60,7 +60,7 @@ if file is not None:
     else:
         st.write("No text found")
   except:
-    error = '<p style="font-family:sans-serif; color:red; font-size: 22px; ">Invalid file uploaded!.\n\n Please upload a valid file.</p>'
+    error = '<p style="font-family:sans-serif; color:red; font-size: 22px; ">Invalid file uploaded! \n Please upload a valid file.</p>'
     st.markdown(error, unsafe_allow_html=True)
 
 st.text("")
