@@ -25,6 +25,7 @@ if file is not None:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
     img=cv2.medianBlur(img,5)
+    img=cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
     #img=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
