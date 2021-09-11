@@ -37,9 +37,10 @@ if file is not None:
   try:
     file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
+    img=cv2.medianBlur(img,5)
+    #You can try pre-processing the image with below functions
     #img=deskew(img)
     #ret,img = cv2.threshold(np.array(img), 125, 255, cv2.THRESH_BINARY)
-    #img=cv2.medianBlur(img,5)
     #img=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
@@ -53,9 +54,9 @@ if file is not None:
             x,y,w,h=int(b[6]),int(b[7]),int(b[8]),int(b[9])
             cv2.rectangle(img,(x,y),(w+x,h+y),(50,50,50),1)
             cv2.putText(img,b[11],(x,y),cv2.FONT_HERSHEY_SIMPLEX,1,(50,50,50),1)
-    st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     if flag==1:
-        credits("Text in your image goes here: ")
+        st.image(img, caption='Text in your image has been highlighted with boxes', use_column_width=True, clamp=True)
+        credits("Text found:")
         st.write(t)
     else:
         st.write("No text found")
