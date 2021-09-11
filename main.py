@@ -3,6 +3,7 @@ import pytesseract
 import cv2
 from PIL import Image
 import numpy as np
+import filetype
 
 def credits(content):
     st.markdown(
@@ -21,11 +22,9 @@ Upload the image from which you need to extract text
 """)
 uploaded_file = st.file_uploader("")
 if uploaded_file is not None:
-  try:  
+  if filetype.isimage(uploaded_file):
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, 1)
-    credits("")
-    credits("Getting text...")
     hImg,wImg,_=img.shape
     boxes = pytesseract.image_to_data(img)
     t = pytesseract.image_to_string(img)
@@ -43,8 +42,10 @@ if uploaded_file is not None:
     st.image(img, caption='Text in your image.', use_column_width=True, clamp=True)
     credits("Text in your image goes here: ")
     st.write(t)
-  except:
-    credits("Please upload a valid file !")
+  else:
+    error = '<p style="font-family:sans-serif; color:red; font-size: 22px; text-align: center">Please upload a valid file !</p>'
+    st.markdown(new_title, unsafe_allow_html=True)
+    credits(
 
 st.text("")
 st.text("")
