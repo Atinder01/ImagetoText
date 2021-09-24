@@ -21,8 +21,12 @@ Flow of the code:
 
 ![text2image-Flowchart](https://user-images.githubusercontent.com/67895402/132952826-35231b61-b445-4d40-a0ef-eed9ecafa0ab.png)
 
-For more details you can refer to the video:
+Screenshots:
 
+![image](https://user-images.githubusercontent.com/67895402/134712522-13f9163e-212d-4063-abde-e617b3e5e2bc.png)
+![image](https://user-images.githubusercontent.com/67895402/134712625-72ba0453-f106-44fb-86a1-bb88a5c6869a.png)
+
+For more details you can refer to the video:
 
 https://user-images.githubusercontent.com/67895402/132949853-ebc01959-c899-49a7-982e-c351b7cdf745.mp4
 
